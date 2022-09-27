@@ -603,6 +603,8 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
             'type' => $this->type,
             'status' => $this->status,
             'title' => $this->title,
+            'detail' => null,
+            'instance' => null,
         ];
 
         foreach ($this->data as $key => $value) {
