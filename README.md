@@ -25,14 +25,14 @@ Creates http exceptions which can be catched and converted to error responses.
 
 ## Requirements
 
- * php: ^8.1
+ * php: ^8.2
 
 ## Installation
 
 Through [Composer](http://getcomposer.org) as [chubbyphp/chubbyphp-http-exception][1].
 
 ```bash
-composer require chubbyphp/chubbyphp-http-exception "^1.1"
+composer require chubbyphp/chubbyphp-http-exception "^1.2"
 ```
 
 ## Usage
