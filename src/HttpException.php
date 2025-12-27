@@ -10,10 +10,10 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
      * @param array<string, null|array|bool|float|int|string> $data
      */
     public function __construct(
-        private string $type,
-        private int $status,
-        private string $title,
-        private array $data = [],
+        private readonly string $type,
+        private readonly int $status,
+        private readonly string $title,
+        private readonly array $data = [],
         ?\Throwable $previous = null,
     ) {
         parent::__construct($title, $status, $previous);
