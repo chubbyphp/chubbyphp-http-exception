@@ -1,8 +1,1 @@
 parameters:
-    ignoreErrors:
-        -
-            message: '/has parameter \$data with no value type specified in iterable type array\./'
-            path: %currentWorkingDirectory%/src/HttpException.php
-        -
-            message: '/return type has no value type specified in iterable type array\./'
-            path: %currentWorkingDirectory%/src/HttpException.php
