@@ -7,7 +7,7 @@ namespace Chubbyphp\HttpException;
 final class HttpException extends \RuntimeException implements HttpExceptionInterface
 {
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public function __construct(
         private readonly string $type,
@@ -20,7 +20,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createBadRequest(array $data = [], ?\Throwable $previous = null): self
     {
@@ -34,7 +34,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createUnauthorized(array $data = [], ?\Throwable $previous = null): self
     {
@@ -48,7 +48,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createPaymentRequired(array $data = [], ?\Throwable $previous = null): self
     {
@@ -62,7 +62,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createForbidden(array $data = [], ?\Throwable $previous = null): self
     {
@@ -76,7 +76,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createNotFound(array $data = [], ?\Throwable $previous = null): self
     {
@@ -90,7 +90,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createMethodNotAllowed(array $data = [], ?\Throwable $previous = null): self
     {
@@ -104,7 +104,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createNotAcceptable(array $data = [], ?\Throwable $previous = null): self
     {
@@ -118,7 +118,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createProxyAuthenticationRequired(array $data = [], ?\Throwable $previous = null): self
     {
@@ -132,7 +132,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createRequestTimeout(array $data = [], ?\Throwable $previous = null): self
     {
@@ -146,7 +146,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createConflict(array $data = [], ?\Throwable $previous = null): self
     {
@@ -160,7 +160,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createGone(array $data = [], ?\Throwable $previous = null): self
     {
@@ -174,7 +174,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createLengthRequired(array $data = [], ?\Throwable $previous = null): self
     {
@@ -188,7 +188,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createPreconditionFailed(array $data = [], ?\Throwable $previous = null): self
     {
@@ -202,7 +202,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createRequestEntityTooLarge(array $data = [], ?\Throwable $previous = null): self
     {
@@ -216,7 +216,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createRequestURITooLong(array $data = [], ?\Throwable $previous = null): self
     {
@@ -230,7 +230,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createUnsupportedMediaType(array $data = [], ?\Throwable $previous = null): self
     {
@@ -244,7 +244,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createRangeNotSatisfiable(array $data = [], ?\Throwable $previous = null): self
     {
@@ -258,7 +258,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createExpectationFailed(array $data = [], ?\Throwable $previous = null): self
     {
@@ -272,7 +272,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createImateapot(array $data = [], ?\Throwable $previous = null): self
     {
@@ -286,7 +286,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createMisdirectedRequest(array $data = [], ?\Throwable $previous = null): self
     {
@@ -300,7 +300,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createUnprocessableEntity(array $data = [], ?\Throwable $previous = null): self
     {
@@ -314,7 +314,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createLocked(array $data = [], ?\Throwable $previous = null): self
     {
@@ -328,7 +328,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createFailedDependency(array $data = [], ?\Throwable $previous = null): self
     {
@@ -342,7 +342,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createTooEarly(array $data = [], ?\Throwable $previous = null): self
     {
@@ -356,7 +356,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createUpgradeRequired(array $data = [], ?\Throwable $previous = null): self
     {
@@ -370,7 +370,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createPreconditionRequired(array $data = [], ?\Throwable $previous = null): self
     {
@@ -384,7 +384,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createTooManyRequests(array $data = [], ?\Throwable $previous = null): self
     {
@@ -398,7 +398,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createRequestHeaderFieldsTooLarge(array $data = [], ?\Throwable $previous = null): self
     {
@@ -412,7 +412,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createUnavailableForLegalReasons(array $data = [], ?\Throwable $previous = null): self
     {
@@ -426,7 +426,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createInternalServerError(array $data = [], ?\Throwable $previous = null): self
     {
@@ -440,7 +440,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createNotImplemented(array $data = [], ?\Throwable $previous = null): self
     {
@@ -454,7 +454,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createBadGateway(array $data = [], ?\Throwable $previous = null): self
     {
@@ -468,7 +468,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createServiceUnavailable(array $data = [], ?\Throwable $previous = null): self
     {
@@ -482,7 +482,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createGatewayTimeout(array $data = [], ?\Throwable $previous = null): self
     {
@@ -496,7 +496,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createHTTPVersionNotSupported(array $data = [], ?\Throwable $previous = null): self
     {
@@ -510,7 +510,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createVariantAlsoNegotiates(array $data = [], ?\Throwable $previous = null): self
     {
@@ -524,7 +524,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createInsufficientStorage(array $data = [], ?\Throwable $previous = null): self
     {
@@ -538,7 +538,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createLoopDetected(array $data = [], ?\Throwable $previous = null): self
     {
@@ -552,7 +552,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createNotExtended(array $data = [], ?\Throwable $previous = null): self
     {
@@ -566,7 +566,7 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @param array<string, null|array|bool|float|int|string> $data
+     * @param array{detail?: null|string, instance?: null|string, ...} $data
      */
     public static function createNetworkAuthenticationRequired(array $data = [], ?\Throwable $previous = null): self
     {
@@ -595,22 +595,18 @@ final class HttpException extends \RuntimeException implements HttpExceptionInte
     }
 
     /**
-     * @return array<string, null|array|bool|float|int|string>
+     * @return array{type: string, status: int, title: string, detail: null|string, instance: null|string, ...}
      */
     public function jsonSerialize(): array
     {
-        $json = [
+        /** @var array{type: string, status: int, title: string, detail: null|string, instance: null|string, ...} */
+        return [
             'type' => $this->type,
             'status' => $this->status,
             'title' => $this->title,
             'detail' => null,
             'instance' => null,
+            ...$this->data,
         ];
-
-        foreach ($this->data as $key => $value) {
-            $json[$key] = $value;
-        }
-
-        return $json;
     }
 }
